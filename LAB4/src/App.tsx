@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <Header setInputValue={handleInput} addAssignment={addAssignment} />
+      <Header input={input} setInputValue={handleInput} addAssignment={addAssignment} />
       <Assignments assignmentList={assignmentList} 
       removeAssignment={removeAssignment} 
       completeList={completeList}
