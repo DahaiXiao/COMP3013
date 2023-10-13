@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { uppercase } from "../../helpers/stringHelpers";
 
-export function Header({ setInputValue, addAssignment }: any) {
+export function Header({ setInputValue, addAssignment, input }: any) {
   const [inputValue, setInput] = useState("");
   const [isButtonActived, setButtonActived]=useState(false);
 
@@ -27,7 +27,7 @@ export function Header({ setInputValue, addAssignment }: any) {
         <input
           placeholder="Add a new assignment"
           type="text"
-          value={inputValue}
+          value={input}
           onChange={handleSetInput}
         />
         <button className={ isButtonActived ? styles.cursorMove : styles.cursor}  disabled={!inputValue.trim()}>Create <AiOutlinePlusCircle size={20} /></button>
